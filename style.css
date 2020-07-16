@@ -7,12 +7,14 @@ html, body{
 }
 
 body{
-    background-color:#c9c9c9;2
+    background-color:#161415
     background-image:url(images/demo1onmock.jpg);
-    background-attachment: fixed;
+    /*background-attachment: fixed;
     background-size:cover;
     background-blend-mode:soft-light;
-    background-position:center;
+    background-position:center;*/
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 .header {
     padding: 30px;
