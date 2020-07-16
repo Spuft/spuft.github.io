@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TEST</title>
+    <link rel="stylesheet" href="text.css" type="text/css"> 
+     <style>
+        a {
+    color: white;
+    text-decoration: none;
+        }
+    
+        a:hover 
+        {
+     color:white; 
+     text-decoration:none; 
+            }
+    </style>   
+</head>
+<body>
+<a href="index.html">
+  <p id="line"></p>
+  </a>
+  <div class="cursor"></div>
+</div>
+<script type="text/javascript">
+	var line = document.getElementById("line")
+var txts = ['Dear Ms.Giang', 'We love you!', 'This is a little gift for you, thanks for everything!', 'Click the text!'];
+var speed = 60
+
+async function typewriter(txt) {
+  for(let i = 0; i < txt.length; i++){
+    line.innerHTML += txt.charAt(i);
+    await delay(speed) 
+  }
+}
+
+async function reverseTypewriter(txt) {
+  for(let i = txt.length; i > 0; i--){
+    line.innerHTML = line.innerHTML.slice(0,-1)
+    await delay(speed)
+  }
+}
+
+async function writeLoop(){
+  
+  for(let i = 0; i < txts.length; i++){
+    await typewriter(txts[i])
+    await delay(2000)
+    await reverseTypewriter(txts[i])
+    await delay(1000)
+  }
+  
+  writeLoop()
+}
+
+function delay(ms){
+  return new Promise((resolve)=>{setTimeout(()=>{resolve()},ms)})
+}
+
+writeLoop()
+</script>
+</body>
+</html>
