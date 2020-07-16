@@ -8,10 +8,10 @@ html, body{
 
 body{
     background-color:#c9c9c9;2
+    background-image:url(images/demo1onmock.jpg);
     background-attachment: fixed;
     background-size:cover;
     background-blend-mode:soft-light;
-    background-image:url(images/trang1.jpg);
     background-position:center;
 }
 .header {
