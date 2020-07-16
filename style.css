@@ -8,79 +8,30 @@ html, body{
 
 body{
     background-color:#161415
-    background-image:url(images/demo1onmock.jpg);
     /*background-attachment: fixed;
     background-size:cover;
     background-blend-mode:soft-light;
-    background-position:center;*/
+    background-position:center;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: auto;*/
+}
+.hinhanh {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
 }
 .header {
     padding: 30px;
     text-align: center;
-    color:black;
+    color: white;
     font-size: 20px;
     font-family:-apple-system, Helvetica Neue, sans-serif;
 }
-.header2 {
-    position: absolute;
-    top: 40px;
-    left:90px;
-    float: left;
-    color: black;
-    font-size: 15px;
-    font-family:-apple-system, Helvetica Neue, sans-serif;
-}
-.header3 {
-    position: absolute;
-    top: 40px;
-    right:90px;
-    float: right;
-    color: black;
-    font-size: 15px;
-    font-family:-apple-system, Helvetica Neue, sans-serif;
 
-}
-.minimenu {
-    position: absolute;
-    left: -80px;
-    top: 50%;
-    text-transform: uppercase;
-    transform: rotate(270deg);
-    font-size: 10px;   
-    font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 1.5;
-}
 .main {
     display: block;
-    margin-top:13%;
     text-align: center;
     color: white;
     font-size: 10pt;
-}
-.headermenu {
-    display: none;
-    position: absolute;
-    top: 40px;
-    left:90px;
-    float: left;
-    color: black;
-    font-size: 15px;
-    font-family:-apple-system, Helvetica Neue, sans-serif;
-}
-@media screen and (max-width: 1110px) {
-  .header2 {
-    display: none;
-  }
-  .header3 {
-    display: none;
-  }
-  .headermenu {
-    display: block;
-    float: left;
-    text-align: left;
-  }
 }
