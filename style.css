@@ -11,6 +11,8 @@ body{
     background-attachment: fixed;
     background-size:cover;
     background-blend-mode:soft-light;
+    background-image:url(images/trang1.jpg);
+    background-position:center;
 }
 .header {
     padding: 30px;
