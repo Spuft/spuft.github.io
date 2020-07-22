@@ -7,9 +7,13 @@
         <meta property="og:description" content="Little gift to our lovely Ms. Giang" />
     </head>
     <body>
-    <audio autoplay loop>
-    <source src="https://data56.chiasenhac.com/downloads/1154/6/1153827-24c4a06b/128/Ratatouille%20Main%20Theme%20-%20Michael%20Giacchi.mp3" type="audio/ogg">
+    <audio autoplay loop id="myaudio">
+    <source src="images/Ratatouille.mp3" type="audio/mpeg">
     </audio>
+        <script>
+    var audio = document.getElementById("myaudio");
+    audio.volume = 0.6;
+        </script>
         <div class="main">  
             <h1 style="cursor:default">OUR AMOUR</h1>
             <h2 style="cursor:default">K63A10</h2>
