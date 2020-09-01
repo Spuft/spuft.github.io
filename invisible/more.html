@@ -7,6 +7,14 @@
         <link rel="stylesheet" href="more.css" type="text/css">
                <link rel="icon" type="image/png" href="images/fav.png">
         <script src="https://kit.fontawesome.com/c035951c0f.js"></script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        var bgmusic = document.getElementById("nhac")
+        function setHalfVolume() { 
+        bgmusic.volume = 0.5;
+        }  
+});
+</script> 
         <style>
         a {
     color: black;
@@ -23,7 +31,7 @@
     </head>
 
     <body>
-        <audio loop autoplay>
+        <audio id="nhac" loop autoplay>
     <source src="music/ugh.mp3" type="audio/mpeg">
     </audio>
         <div class="header">
