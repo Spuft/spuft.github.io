@@ -15,11 +15,35 @@ body{
     background-repeat: no-repeat;
     background-size: auto;*/
 }
+footer{
+  position: absolute;
+  font-size: 13pt;
+  font-family:-apple-system, Helvetica Neue, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  font-weight: 500;
+}
+.feet {
+  color: white;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+}
+.download {
+  color: white;
+  position: relative;
+  left: 575px;
+  top: 10px;
+  font-size: 10pt;
+  font-family:-apple-system, Helvetica Neue, sans-serif;
+  width: 100%;
+}
 .hinhanh {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 70%;
 }
 
 .main {
