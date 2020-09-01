@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>INVISIBLE GALLERY</title>
+        <link rel="stylesheet" href="art.css" type="text/css">
+        <link rel="icon" type="image/png" href="images/fav.png">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+     <style>
+        a {
+    color: black;
+    text-decoration: none;
+        }
+    
+        a:hover 
+        {
+     color:black; 
+     text-decoration:none; 
+     cursor:default;  
+            }
+    </style>
+    </head>
+
+    <body>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
+        <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="index.html">HOME</a>
+  <a href="art.html">EXPLORE THE ART</a>
+  <a href="more.html">ABOUT US</a>
+  <a href="blog.html">BLOG</a>
+</div>
+<div class="openbtn" onclick="openNav()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<div id="main">
+   <div class="header">
+            <h1><a href="index.html">INVISIBLE</a></h1>
+            <p><a href="index.html">GALLERY</a></p>
+        </div>
+  <div class="row"> 
+  <div class="column"> 
+    <!--chinh theo category tone mau chu dao, chia thanh tung phan (1 phan bnw, 1 phan film, 1 phan graphic,...-->
+    <img src="images/art1.jpg" class="star" style="width:100%">
+    <img src="images/hinh/1.jpeg" class="star" style="width:100%">
+    <img src="images/hinh/2.jpg" class="star" style="width:100%">
+    <img src="images/hinh/3.png" class="star" style="width:100%">
+    <img src="images/hinh/4.jpg" class="star" style="width:100%">
+    <img src="images/hinh/10.jpeg" class="star" style="width:100%">
+    <img src="images/hinh/12.jpg" class="star" style="width:100%">
+    <img src="images/hinh/15.jpg" class="star" style="width:100%">
+    <img src="images/hinh/16.jpg" class="star" style="width:100%">
+    <img src="images/hinh/18.jpg" class="star" style="width:100%">
+    <img src="images/hinh/20.jpg" class="star" style="width:100%">
+    <img src="images/hinh/24.jpg" class="star" style="width:100%">
+    <img src="images/hinh/26.jpg" class="star" style="width:100%">
+    <img src="images/hinh/28.jpg" class="star" style="width:100%">
+    <img src="images/hinh/27.jpg" class="star" style="width:100%">
+    <img src="images/hinh/29.jpg" class="star" style="width:100%">
+    <img src="images/hinh/22.jpg" class="star" style="width:100%">
+
+</div>
+    <div class="column">
+    <img src="images/hinh/14.jpg" class="star" style="width:100%"> 
+    <img src="images/hinh/6.jpg" class="star" style="width:100%">
+    <img src="images/hinh/5.jpg" class="star" style="width:100%">
+    <img src="images/hinh/7.jpg" class="star" style="width:100%">
+    <img src="images/hinh/8.jpg" class="star" style="width:100%">
+    <img src="images/hinh/9.jpg" class="star" style="width:100%">
+    <img src="images/hinh/11.jpg" class="star" style="width:100%">
+    <img src="images/hinh/13.jpg" class="star" style="width:100%">
+    <img src="images/hinh/17.jpg" class="star" style="width:100%">
+    <img src="images/hinh/19.jpg" class="star" style="width:100%">
+    <img src="images/hinh/21.jpg" class="star" style="width:100%">
+    <img src="images/hinh/23.jpg" class="star" style="width:100%">
+    <img src="images/hinh/25.jpg" class="star" style="width:100%">
+  </div>
+</div>
+</div>
+     
+      <script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script type="text/javascript">
+                
+                 function showImages(el) {
+            var windowHeight = jQuery( window ).height();
+            $(el).each(function(){
+                var thisPos = $(this).offset().top;
+
+                var topOfWindow = $(window).scrollTop();
+                if (topOfWindow + windowHeight - 200 > thisPos ) {
+                    $(this).addClass("fadeIn");
+                }
+            });
+        }
+
+        // if the image in the window of browser when the page is loaded, show that image
+        $(document).ready(function(){
+                showImages('.star');
+        });
+
+        // if the image in the window of browser when scrolling the page, show that image
+        $(window).scroll(function() {
+                showImages('.star');
+        });
+            
+            </script>
+     <script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  // IE10
+    elements[i].style.flex = "25%";
+  }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+<script>
+ function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+</script>
+    </body>
+<footer>
+    <div class="feet">
+        <p><b><i>2020</i> &#9400; INVISIBLE</b> by marcherz</p>
+    </div>
+</footer>
+</html>

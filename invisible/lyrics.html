@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>INVISIBLE GALLERY</title>
+        <link rel="stylesheet" href="lyrics.css" type="text/css">
+        <link rel="icon" type="image/png" href="images/fav.png">
+     <style>
+        a {
+    color: black;
+    text-decoration: none;
+        }
+    
+        a:hover 
+        {
+     color:black; 
+     text-decoration:none; 
+     cursor:default;  
+            }
+    </style>
+    </head>
+
+    <body>
+      <div id="main2" class="mini">
+  <p>Greetings! Finally, we are back with a new mini project<br> 
+  that will be launched in the beginning of 2020,<br>
+  <h2>MINI PROJECT: LYRICS</h2> is a part of our program in 2020.<br>
+  A lot of 'INVISIBLE song' will be put on a page (with the size of a<br>
+  CD booklet), including lyrics, artist, name, further information<br>
+  and even story behind the song (if possible).</p>
+</div>
+<div style="position:relative;">
+  <img src="images/small4.jpg" class="things" style="width:300px">
+  <img src="images/small1.jpg" class="thing2" style="width:300px">
+  <img src="images/small2.jpg" class="thing4" style="width:300px">
+  <img src="images/small3.jpg" class="thing3" style="width:300px">
+</div>
+ 
+  <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="index.html">HOME</a>
+  <a href="art.html">EXPLORE THE ART</a>
+  <a href="more.html">KNOW MORE</a>
+  <a href="blog.html">BLOG</a>
+</div>
+<div class="openbtn" onclick="openNav()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<div id="main">
+   <div class="header">
+            <h1><a href="index.html">GALLERY</a></h1>
+            <p><a href="index.html">INVISIBLE</a></p>
+        </div>
+     <script>
+ 
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+<script>
+ function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("main2").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("main2").style.marginLeft = "0";
+}
+
+</script>
+    </body>
+<footer>
+<div class="feet">
+<p><b><i>2020</i> &#9400; INVISIBLE</b> by marcherz</p>
+    </div>
+</footer>
+</html>
