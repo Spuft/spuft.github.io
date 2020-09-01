@@ -11,10 +11,12 @@
         setTimeout(function(){
         $("#inv").fadeIn(400);
         }, 1500)
-        setTimeout(function(){
-        $("#nhac").play();
-        }, 1500 );
         </script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("nhac").volume = 0.5;
+        });
+        </script> 
         <style>
         a {
     color: black;
@@ -29,8 +31,8 @@
         }
     </style>
     </head>
-    <body id="bg">
-    <audio loop autoplay>
+    <body>
+    <audio id="nhac" loop autoplay>
     <source src="music/AMI.mp3" type="audio/mpeg">
     </audio>
         <div class="header">
