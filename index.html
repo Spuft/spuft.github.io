@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>K63A10</title>
-    <link rel="stylesheet" href="index.css" type="text/css"> 
-     <style>
-        a {
-    color: white;
-    text-decoration: none;
-        }
-    
-        a:hover 
-        {
-     color:white; 
-     text-decoration:none; 
-            }
-    </style>   
+  <meta charset="UTF-8">
+  <title>K63A10</title>
+  <link rel="stylesheet" href="index.css" type="text/css">
+  <style>
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
 </head>
+
 <body>
-<a href="style.html">
-  <p id="line"></p>
+  <audio id="typing">
+    <source src="images/typing.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="stopTyping">
+    <source src="images/stopTyping.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="ting">
+    <source src="images/ting.mp3" type="audio/mpeg">
+  </audio>
+
+  <a href="style.html">
+    <p id="line"></p>
   </a>
   <div class="cursor"></div>
-</div>
-<script type="text/javascript">
-	setTimeout(myFunction, 45000)
-  function myFunction() {
-  window.location.href = 'style.html'
-}
-var line = document.getElementById("line")
-var txts = ['Dear Ms.Giang',
+  </div>
+  <script>
+    //type="text/javascript">
+    setTimeout(myFunction, 39500)
+
+    function myFunction() {
+      window.location.href = 'style.html'
+    }
+    var line = document.getElementById("line")
+    var txts = ['Dear Ms.Giang',
       'This is just a little project that we have been working on together',
       'Just a little good-bye gift but a huge love from us to you',
       'It might not be the best thing you have ever seen',
@@ -37,39 +52,56 @@ var txts = ['Dear Ms.Giang',
       'Now make yourself a cup of tea, sit back and enjoy...',
       'Love 💖'
     ];
-var speed = 60
+    var speed = 150
 
-async function typewriter(txt) {
-  for(let i = 0; i < txt.length; i++){
-    line.innerHTML += txt.charAt(i);
-    await delay(speed) 
-  }
-}
+    async function typewriter(txt) {
+      var x = document.getElementById("typing");
+      var y = document.getElementById("ting");
+      x.volume = 0.6;
+      y.volume = 0.6;
 
-async function reverseTypewriter(txt) {
-  for(let i = txt.length; i > 0; i--){
-    line.innerHTML = line.innerHTML.slice(0,-1)
-    await delay(30)
-  }
-}
+      for (let i = 0; i < txt.length; ++i) {
+        x.play();
+        line.innerHTML += txt.charAt(i);
+        await delay(30)
+      }
+      x.pause();
+      y.play();
+    }
 
-async function writeLoop(){
-  
-  for(let i = 0; i < txts.length; i++){
-    await typewriter(txts[i])
-    await delay(2000)
-    await reverseTypewriter(txts[i])
-    await delay(1000)
-  }
-  
-  writeLoop()
-}
+    async function reverseTypewriter(txt) {
+      for (let i = txt.length; i > 0; i--) {
+        var audio = document.getElementById("stopTyping");
+        audio.volume = 0.6;
+        audio.play();
 
-function delay(ms){
-  return new Promise((resolve)=>{setTimeout(()=>{resolve()},ms)})
-}
+        line.innerHTML = line.innerHTML.slice(0, -1)
+        await delay(30)
+      }
+    }
 
-writeLoop()
-</script>
+    async function writeLoop() {
+
+      for (let i = 0; i < txts.length; i++) {
+        await typewriter(txts[i])
+        await delay(2000)
+        await reverseTypewriter(txts[i])
+        await delay(1000)
+      }
+
+      writeLoop()
+    }
+
+    function delay(ms) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve()
+        }, ms)
+      })
+    }
+
+    writeLoop()
+  </script>
 </body>
+
 </html>
