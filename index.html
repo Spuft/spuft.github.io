@@ -19,16 +19,22 @@
 </head>
 
 <body>
-  <audio id="typing">
+  <audio autoplay id="typing">
     <source src="images/typing.mp3" type="audio/mpeg">
+    <source src="images/typing.wav" type="audio/wav">
+    <source src="images/typing.ogg" type="audio/ogg">
   </audio>
 
-  <audio id="stopTyping">
+  <audio autoplay id="stopTyping">
     <source src="images/stopTyping.mp3" type="audio/mpeg">
+    <source src="images/stopTyping.wav" type="audio/wav">
+    <source src="images/stopTyping.ogg" type="audio/ogg">
   </audio>
 
-  <audio id="ting">
+  <audio autoplay id="ting">
     <source src="images/ting.mp3" type="audio/mpeg">
+    <source src="images/ting.wav" type="audio/wav">
+    <source src="images/ting.ogg" type="audio/ogg">
   </audio>
 
   <a href="style.html">
@@ -37,19 +43,22 @@
   <div class="cursor"></div>
   </div>
   <script>
-    //type="text/javascript">
-    setTimeout(myFunction, 39500)
+    setTimeout(myFunction, 51500)
 
     function myFunction() {
       window.location.href = 'style.html'
     }
     var line = document.getElementById("line")
     var txts = ['Dear Ms.Giang',
-      'This is just a little project that we have been working on together',
-      'Just a little good-bye gift but a huge love from us to you',
+      'This is just a little project...',
+      'that we have been working on together',
+      'Just a little good-bye gift...',
+      'but a huge love from us to you!',
       'It might not be the best thing you have ever seen',
-      'but I am sure it will be something that you would love and cherish',
-      'Now make yourself a cup of tea, sit back and enjoy...',
+      'but I am sure it will be something...',
+      'that you would love and cherish^^',
+      'Now make yourself a cup of tea,',
+      'sit back and enjoy...',
       'Love 💖'
     ];
     var speed = 150
@@ -57,8 +66,8 @@
     async function typewriter(txt) {
       var x = document.getElementById("typing");
       var y = document.getElementById("ting");
-      x.volume = 0.6;
-      y.volume = 0.6;
+      x.volume = 0.8;
+      y.volume = 0.8;
 
       for (let i = 0; i < txt.length; ++i) {
         x.play();
@@ -72,7 +81,7 @@
     async function reverseTypewriter(txt) {
       for (let i = txt.length; i > 0; i--) {
         var audio = document.getElementById("stopTyping");
-        audio.volume = 0.6;
+        audio.volume = 0.8;
         audio.play();
 
         line.innerHTML = line.innerHTML.slice(0, -1)
