@@ -1,0 +1,155 @@
+*{
+    margin:auto;
+    padding:0;
+    box-sizing: border-box;
+}
+html, body{
+    height:100%;
+}
+
+body{
+    background-color:purple;
+    background-image:url(images/about.gif);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-attachment: fixed;
+    background-size:cover;
+    background-blend-mode:screen;
+}
+.header {
+    padding: 30px;
+    text-align: center;
+    color:black;
+    font-size: 20px;
+    font-family:-apple-system, Helvetica Neue, sans-serif;
+}
+.header2 {
+    position: absolute;
+    top: 40px;
+    left:90px;
+    color: black;
+    font-size: 15px;
+    font-family:-apple-system, Helvetica Neue, sans-serif;
+}
+.header3 {
+    position: absolute;
+    top: 40px;
+    right:220px;
+    float: right;
+    color: black;
+    font-size: 15px;
+    font-family:-apple-system, Helvetica Neue, sans-serif;
+}
+.doanvan2 {
+  font-size:20px;
+  font-family:monospace;
+  position:absolute;
+  text-align:left;
+  left:35px;
+  top:25%;
+}
+.star {
+        visibility: hidden;
+       /* position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);*/
+
+    }
+
+    .fadeIn {
+        -webkit-animation: animat_show 0.8s;
+        animation: animat_show 0.8s;
+        visibility: visible !important;
+    }
+
+    @-webkit-keyframes animat_show{
+        0%{opacity:0}
+        100%{opacity:1}
+    }  
+.fa-facebook-square {
+font-size: 48px;
+}
+.fa-inbox
+{ font-size: 48px; }
+.fa-instagram
+{font-size: 48px;}
+.fab:hover {
+  opacity: 0.7;
+}
+.fas:hover {
+  opacity: 0.7;
+}
+{ font-size: 48px; }
+#fuck { cursor: pointer; }
+
+/*side fucking bar for responsive, dont touch it*/
+.headermenu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left:90px;
+    float: left;
+    color: black;
+    font-size: 15px;
+    font-family:-apple-system, Helvetica Neue, sans-serif;
+}
+@media screen and (max-width: 1110px) {
+  .header2 {
+    display: none;
+  }
+  .header3 {
+    display: none;
+  }
+  .headermenu {
+    display: block;
+    float: left;
+    text-align: left;
+  }
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family:-apple-system, Helvetica Neue, sans-serif;
+  font-weight:bold;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}

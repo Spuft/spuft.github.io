@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CREATIO: GANGSTOYS</title>
+        <link rel="stylesheet" href="art.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("nhac").volume = 0.8;
+        });
+        </script>
+     <style>
+        a {
+    color: white;
+    text-decoration: none;
+        }
+    
+        a:hover 
+        {
+     color:white; 
+     text-decoration:none; 
+     cursor:default;  
+            }
+    </style>
+    </head>
+
+    <body>
+    <audio id="nhac" loop autoplay>
+    <source src="../music/free.mp3" type="audio/mpeg">
+    </audio>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+<div id="main">
+   <div class="header">
+            <h1><a href="index.html">CREATIO</a></h1>
+            <p><a href="index.html">Bùi Thanh Mai</a></p>
+        </div>
+            <img src="images/te.png" class="star" style="width:100%">
+            <img src="images/t2.png" class="star" style="width:100%">
+            <img src="images/t3.png" class="star" style="width:100%">
+                        <img src="images/t5.png" class="star" style="width:100%">
+                        <img src="images/t6.png" class="star" style="width:100%">
+
+
+</div>     
+      <script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+    </body>
+<footer>
+    <div class="feet">
+        <p><b><i>2022</i> @ CREATIO</b> buithanhmai</p>
+    </div>
+</footer>
+</html>
