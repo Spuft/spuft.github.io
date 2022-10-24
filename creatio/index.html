@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BUI THANH MAI</title>
+        <link rel="stylesheet" href="index.css" type="text/css">
+        <meta property="og:title" content="BUI THANH MAI" />
+        <meta property="og:description" content="CREATION WITHOUT END!" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script>
+        setTimeout(function(){
+        $("#inv").fadeIn(400);
+        }, 1500)
+        </script>
+        <style>
+        a {
+    color: black;
+    text-decoration: none;
+        }
+    
+        a:hover 
+        {
+    color:black; 
+    text-decoration:none; 
+    cursor:default;  
+        }
+    </style>
+    </head>
+    <body id="bg">
+        <div class="header">
+            <h1><a href="index.html">CREATIO</a></h1>
+            <p><a href="index.html">Bùi Thanh Mai</a></p>
+        </div>
+        <div class="header2">
+            <h1><a href="art.html">EXPLORE</a></h1>
+        </div>
+        <div class="header3">
+            <h1><a href="more.html">01: ABOUT ME</a></h1>
+        </div>
+        <div id="inv" style="display:none;">
+            <h2 data-text="GANGSTOYS">GANGSTOYS</h2>
+        </div>
+        
+        <script type="text/javascript">
+            var images = [
+            "images/1.gif",
+            "images/2.gif",
+            "images/3.gif",
+            "images/4.gif",
+            ]
+            var imageHead = document.getElementById("bg");
+            var i = 0;
+            setInterval(function() 
+                {
+            imageHead.style.backgroundImage = "url(" + images[i] + ")";
+            i = i + 1;
+            if (i == images.length) 
+            {
+            i =  0;
+            }
+                }, 1500);
+        </script>
+
+        <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="index.html">HOME</a>
+  <a href="art.html">EXPLORE</a>
+  <a href="more.html">01: ABOUT ME</a>
+</div>
+<div class="openbtn" onclick="openNav()">
+    <div class="headermenu">
+    <h1>MENU</h1>
+    </div> 
+</div>
+<script>
+ function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+    </body>
+</html>
