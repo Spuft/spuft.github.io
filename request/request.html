@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Video Request</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    label {
+      margin-bottom: 5px;
+    }
+    input[type="text"] {
+      padding: 8px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Request a YouTube Video</h1>
+  <form id="videoRequestForm">
+    <label for="videoUrl">Enter YouTube Video URL:</label>
+    <input type="text" id="videoUrl" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById('videoRequestForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const videoUrl = document.getElementById('videoUrl').value;
+      addVideoToQueue(videoUrl);
+    });
+
+    async function addVideoToQueue(videoUrl) {
+      try {
+        const apiKey = 'AIzaSyCyLSO5IMUSmpyey8_lldRT3YNX9EHLDq4'; // Replace with your YouTube API key
+        const playlistId = 'PLmq2OITGhSP4Q6O9uGOBhDFTrKWgKEIw2'; // Replace with your playlist ID
+
+        const response = await fetch(`/add_to_queue?api_key=${apiKey}&playlist_id=${playlistId}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ video_url: videoUrl })
+        });
+
+        if (response.ok) {
+          const result = await response.json();
+          alert(result.message); // Show success message to the user
+        } else {
+          throw new Error('Failed to add video to the queue');
+        }
+      } catch (error) {
+        console.error(error);
+        alert('An error occurred. Please try again later.');
+      }
+    }
+  </script>
+</body>
+</html>
